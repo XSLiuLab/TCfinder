@@ -43,6 +43,7 @@ pathway_score <- function(normalized_matrix){
   }
 
   pathway_score <- all_pathway_score[,-1]
+  pathway_score <- pathway_score %>% dplyr::select(TCfinder_Pathway$hsa)
   return(pathway_score)
 
 
