@@ -10,6 +10,8 @@
 
 pathway_score <- function(normalized_matrix){
 
+  KEGG_Gene <- TCfinder::KEGG_Gene
+  TCfinder_Pathway <- TCfinder::TCfinder_Pathway
 
   score_gene <- KEGG_Gene %>% filter(hsa %in% TCfinder_Pathway$hsa)
 
