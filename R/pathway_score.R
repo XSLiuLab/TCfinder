@@ -5,14 +5,13 @@
 #' @param normalized_matrix Single-cell expression matrix after normalization of the original counts matrix.
 #' @return A matrix containing 213 pathway scores.
 #' @export
-#' @examples
+#' @importFrom dplyr %>% filter select
 
 
 pathway_score <- function(normalized_matrix){
 
-  Diff_path <- readRDS("data/Diff_path.rds")
-  KEGG_gene <- readRDS("data/KEGG_pathway_gene.rds")
-  score_gene <- KEGG_gene %>% filter(hsa %in% Diff_pathway$hsa)
+
+  score_gene <- KEGG_Gene %>% filter(hsa %in% TCfinder_Pathway$hsa)
 
 
   gene_id <- rownames(normalized_matrix)

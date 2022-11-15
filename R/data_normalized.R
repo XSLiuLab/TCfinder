@@ -5,8 +5,7 @@
 #' @param expr_data A single-cell counts expression matrix.
 #' @return A normalized single-cell expression matrix.
 #' @export
-#' @examples
-
+#' @importFrom dplyr %>% filter select mutate_all funs
 
 
 data_normalized <- function(expr_data){
