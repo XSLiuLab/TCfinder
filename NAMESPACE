@@ -2,8 +2,10 @@
 
 export(data_normalized)
 export(pathway_score)
+export(predict_cell)
 importFrom(dplyr,"%>%")
 importFrom(dplyr,filter)
 importFrom(dplyr,funs)
 importFrom(dplyr,mutate_all)
 importFrom(dplyr,select)
+importFrom(reticulate,source_python)
