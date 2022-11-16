@@ -17,6 +17,7 @@ pathway_score <- function(normalized_matrix){
 
 
   gene_id <- rownames(normalized_matrix)
+  barcode <- colnames(normalized_matrix)
   normalized_matrix <- as.data.frame(t(normalized_matrix))
   colnames(normalized_matrix) <- gene_id
 
@@ -44,6 +45,7 @@ pathway_score <- function(normalized_matrix){
 
   pathway_score <- all_pathway_score[,-1]
   pathway_score <- pathway_score %>% dplyr::select(TCfinder_Pathway$hsa)
+  rownames(pathway_score) <- barcode
   return(pathway_score)
 
 

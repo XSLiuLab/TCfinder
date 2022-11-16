@@ -11,6 +11,7 @@
 
 predict_cell <- function(path_score){
 
+  barcode <- rownames(path_score)
   Path <- fs::path_package("extdata",package = "TCfinder")
   reticulate::source_python(paste0(Path,"/predict_py.py"))
 
@@ -19,9 +20,6 @@ predict_cell <- function(path_score){
   result <- predict_result %>% mutate(cell_type = case_when(V1 > 0.5 ~ "normal",
                                                             V1 <= 0.5 ~ "tumor"))
   colnames(result) <- c("value","cell_type")
+  result$barcode <- barcode
   return(result)
 }
-
-
-
-
