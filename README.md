@@ -38,7 +38,7 @@ The row name is gene symbol, and the column name is barcode of the sample.
 
 ### Pathway score
 
-The path score is calculated using the built-in 213 paths according to the formula in workflow. 
+The path score is calculated using the built-in 213 pathways according to the formula in workflow. 
 
 The output of data_normalized() can be directly used as the input of pathway_score()
 
