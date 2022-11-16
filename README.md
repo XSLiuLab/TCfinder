@@ -1,2 +1,2 @@
 # TCfinder
-![Image text](image/workflow.png)
+![Image text](inst/image/workflow.png)
