@@ -101,3 +101,9 @@ predict_result <- predict_cell(path_score = result2)
 ## Contributors
 
 TCfinder was developed by Chenxu Wu. Please contact Chenxu Wu: wuchx@shanghaitech.edu.cn for any questions or suggestions. Thank you for your use and feedback.
+
+------
+
+**Cancer Biology Group @ShanghaiTech**
+
+**Research group led by Xue-Song Liu in ShanghaiTech University**
