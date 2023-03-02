@@ -1,0 +1,19 @@
+#!/bin/sh
+#PBS -N tpm_train
+#PBS -k oe
+#PBS -l walltime=1000:00:00,nodes=1:ppn=1
+#PBS -q pub_gpu
+
+
+  if [ -f "/public/home/liuxs/anaconda3/etc/profile.d/conda.sh" ]; then
+      . "/public/home/liuxs/anaconda3/etc/profile.d/conda.sh"
+  else
+        export PATH="/public/home/liuxs/anaconda3/bin:$PATH"
+  fi
+
+
+# conda activate  /public/slst/home/wuchx/anaconda3/envs/python3
+cd /public/slst/home/wuchx/project/mcIdentify/mcIdentify/code/train673_model
+
+
+python /public/slst/home/wuchx/project/mcIdentify/mcIdentify/code/train673_model/train_para.py
