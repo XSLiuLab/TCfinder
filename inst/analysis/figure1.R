@@ -202,10 +202,3 @@ ComplexHeatmap::Heatmap(data4,cluster_rows = F,cluster_columns = F,name = " ",
                         show_column_names = F,show_row_names = F,show_heatmap_legend = F)
 
 
-
-
-fwrite(GSE673_diff_path213,"../GSE673_diff_path213.csv")
-
-
-
-a <- fread("../datasets/GSE131309_Seq_anno.txt")
