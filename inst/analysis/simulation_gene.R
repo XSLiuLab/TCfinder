@@ -55,8 +55,8 @@ for (number in c(20)) {
   colnames(expr_matrix) <- rownames(expr_data)
   data1 <- expr_matrix
   
-  GSE256_diff_path3 <- readRDS("./model_built/pathway_score_213/GSE673_diff_path213.rds")
-  score_gene <- pathway_gene %>% filter(hsa %in% GSE256_diff_path3$hsa)
+  GSE673_diff_path3 <- readRDS("./model_built/pathway_score_213/GSE673_diff_path213.rds")
+  score_gene <- pathway_gene %>% filter(hsa %in% GSE673_diff_path3$hsa)
   
   ##pathway score
   
