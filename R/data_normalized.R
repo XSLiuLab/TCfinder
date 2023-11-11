@@ -40,7 +40,7 @@ data_normalized <- function(expr_data,method,genome = "hg38"){
 
     colnames(gene_length) <- c("gene_name","Length")
     expr_data$gene_name <- rownames(expr_data)
-    use_data <- dplyr::inner_join(gene_length,expr_data)
+    use_data <- dplyr::inner_join(gene_length,expr_data) %>% as.data.frame()
 
 
     result_value <- use_data
