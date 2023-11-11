@@ -26,7 +26,6 @@ data_normalized <- function(expr_data,method,genome = "hg38"){
     return(data2)
   }
 
-
   if (method == "smart-seq2") {
 
     if (genome == "hg19") {
@@ -50,11 +49,13 @@ data_normalized <- function(expr_data,method,genome = "hg38"){
       result_value[,i] <- result
     }
 
+
     data1 <- result_value %>% dplyr::select(-Length,-gene_name) %>% as.data.frame()
     data2 <- data1 %>% dplyr::mutate_all(funs(log2(.+1)))
     rownames(data2) <- use_data$gene_name
     return(data2)
   }
+
 
 
   if (!all(method %in% c("10X", "smart-seq2"))) {
