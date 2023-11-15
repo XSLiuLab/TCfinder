@@ -18,7 +18,9 @@ VignetteBuilder: knitr
 Imports:
     dplyr,
     reticulate,
-    fs
+    fs,
+    Matrix,
+    methods
 Depends: 
     R (>= 3.50)
 LazyData: true

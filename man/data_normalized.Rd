@@ -4,14 +4,15 @@
 \alias{data_normalized}
 \title{data normalized}
 \usage{
-data_normalized(expr_data, method, genome = "hg38")
+data_normalized(expr_data, method = "method", genome = "hg38")
 }
 \arguments{
 \item{expr_data}{A single-cell counts expression matrix.}
 
-\item{method}{Single cell sequencing type, "10X" or "smart-seq2"}
+\item{method}{If the single-cell sequencing method used is smart-seq2, method = "smart-seq2" is required.
+For other single-cell sequencing methods, this parameter does not need to be filled in.}
 
-\item{genome}{Reference genome, when method == "smart-seq2",
+\item{genome}{Reference genome, when method = "smart-seq2",
 this parameter needs to be filled in, you can choose hg19 and hg38}
 }
 \value{
