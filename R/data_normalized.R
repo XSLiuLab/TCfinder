@@ -28,9 +28,9 @@ data_normalized <- function(expr_data,method = "method",genome = "hg38"){
 
     sparse_data1 <- expr_data %*% Matrix::Diagonal(x = 1 / Matrix::colSums(expr_data)) * 10000
 
-    nonzero_indices <- which(sparse_data1 != 0, arr.ind = TRUE)
-    sparse_data1[nonzero_indices] <- round(log2(sparse_data1[nonzero_indices] + 1), 3)
-
+    #nonzero_indices <- which(sparse_data1 != 0, arr.ind = TRUE)
+    #sparse_data1[nonzero_indices] <- round(log2(sparse_data1[nonzero_indices] + 1), 3)
+    sparse_data1 <- round(log2(sparse_data1 + 1), 3)
     return(sparse_data1)
 
   }
@@ -65,9 +65,9 @@ data_normalized <- function(expr_data,method = "method",genome = "hg38"){
     rownames(result_matrix) <- rownames(selected_rows)
 
     sparse_data1 <- Matrix::Matrix(as.matrix(result_matrix),sparse = T)
-    nonzero_indices <- which(sparse_data1 != 0, arr.ind = TRUE)
-    sparse_data1[nonzero_indices] <- round(log2(sparse_data1[nonzero_indices] + 1), 3)
-
+    #nonzero_indices <- which(sparse_data1 != 0, arr.ind = TRUE)
+    #sparse_data1[nonzero_indices] <- round(log2(sparse_data1[nonzero_indices] + 1), 3)
+    sparse_data1 <- round(log2(sparse_data1 + 1), 3)
 
     return(sparse_data1)
   }
