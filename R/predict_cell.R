@@ -6,6 +6,7 @@
 #' @return A data.frame containing cell types and predicted values.
 #' @export
 #' @importFrom reticulate source_python
+#' @importFrom dplyr mutate case_when
 
 
 
@@ -17,8 +18,8 @@ predict_cell <- function(path_score){
 
   predict <- predict_py(path_score,Path)
   predict_result <- as.data.frame(predict)
-  result <- predict_result %>% mutate(cell_type = case_when(V1 > 0.5 ~ "normal",
-                                                            V1 <= 0.5 ~ "tumor"))
+  result <- predict_result %>% dplyr::mutate(cell_type = dplyr::case_when(V1 > 0.5 ~ "normal",
+                                                                          V1 <= 0.5 ~ "tumor"))
   colnames(result) <- c("value","cell_type")
   result$barcode <- barcode
   return(result)

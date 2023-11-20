@@ -4,10 +4,18 @@
 \alias{pathway_score}
 \title{pathway score}
 \usage{
-pathway_score(normalized_matrix)
+pathway_score(expr_data, normalized = TRUE, method = "method", genome = "hg38")
 }
 \arguments{
-\item{normalized_matrix}{Single-cell expression matrix after normalization of the original counts matrix.}
+\item{expr_data}{Single-cell expression matrix after normalization of the original counts matrix.}
+
+\item{normalized}{If the matrix is not normalized, you need to set normalized = FALSE}
+
+\item{method}{This parameter is required when normalized = FALSE. If the single-cell sequencing method used is smart-seq2, method = "smart-seq2" is required.
+For other single-cell sequencing methods, this parameter does not need to be filled in.}
+
+\item{genome}{This parameter is required when normalized = FALSE. Reference genome, when method = "smart-seq2",
+this parameter needs to be filled in, you can choose hg19 and hg38}
 }
 \value{
 A matrix containing 213 pathway scores.
@@ -16,5 +24,5 @@ A matrix containing 213 pathway scores.
 Obtain a pathway score matrix for predicting tumor cells.
 }
 \details{
-Input a data.frame where the rows are the gene names and the columns are the sample names. Matrix that can be generated directly using the data_normalized.R function.
+Input a sparse matrix, matrix, or data frame where the rows are the gene names and the columns are the sample names. Matrix that can be generated directly using the data_normalized.R function.
 }

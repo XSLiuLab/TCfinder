@@ -1,6 +1,6 @@
 Package: TCfinder
 Title: Tumor cell identification in single-cell datasets
-Version: 1.0.0.1
+Version: 1.2.0.1
 Authors@R: 
     person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
@@ -18,7 +18,9 @@ VignetteBuilder: knitr
 Imports:
     dplyr,
     reticulate,
-    fs
+    fs,
+    Matrix,
+    methods
 Depends: 
     R (>= 3.50)
 LazyData: true
