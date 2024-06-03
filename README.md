@@ -18,11 +18,13 @@ TCfinder contains three functions, which respectively standardize the raw counts
 
 ### Data normalization
 
-The input data needs to be a data.frame data whose row name is gene name and column name is sample name.
+The input data needs to be a sparse matrix or data.frame data whose row name is gene name and column name is sample name.
+
+If the single-cell sequencing method used is smart-seq2, method = "smart-seq2" is required, and needed to select genome = "hg19" or "hg38". For other single-cell sequencing methods, this parameter does not need to be filled in.
 
 ```R
 library(TCfinder)
-result1 <- data_normalized(expr_data = expr_data)
+result1 <- data_normalized(expr_data = expr_data,method = "method",genome = "hg38")
 ```
 
 #### Example:
@@ -40,7 +42,7 @@ The row name is gene symbol, and the column name is barcode of the sample.
 
 The path score is calculated using the built-in 213 pathways according to the formula in workflow. 
 
-The output of data_normalized() can be directly used as the input of pathway_score()
+The output of data_normalized() can be directly used as the input of pathway_score(). If the matrix is not normalized, "normalized = FALSE" is needed to set
 
 ```R
 result2 <- pathway_score(normalized_matrix = result1)
@@ -67,9 +69,9 @@ conda create -n new_env python=3.8
 # Activate the new environment
 conda activate new_env
 # Install required modules
-conda install tensorflow
-conda install pandas
-conda install numpy
+conda install tensorflow==2.3.0
+conda install pandas==1.0.5
+conda install numpy==1.18.5
 # View conda environment information
 conda env list # Copy the address of the new conda environment, which will be used later
 ```

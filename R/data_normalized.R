@@ -30,7 +30,8 @@ data_normalized <- function(expr_data,method = "method",genome = "hg38"){
 
     #nonzero_indices <- which(sparse_data1 != 0, arr.ind = TRUE)
     #sparse_data1[nonzero_indices] <- round(log2(sparse_data1[nonzero_indices] + 1), 3)
-    sparse_data1 <- round(log2(sparse_data1 + 1), 3)
+    #sparse_data1 <- round(log2(sparse_data1 + 1), 3)
+    sparse_data1 <- log1p(sparse_data1)/log(2)
     return(sparse_data1)
 
   }
@@ -67,8 +68,8 @@ data_normalized <- function(expr_data,method = "method",genome = "hg38"){
     sparse_data1 <- Matrix::Matrix(as.matrix(result_matrix),sparse = T)
     #nonzero_indices <- which(sparse_data1 != 0, arr.ind = TRUE)
     #sparse_data1[nonzero_indices] <- round(log2(sparse_data1[nonzero_indices] + 1), 3)
-    sparse_data1 <- round(log2(sparse_data1 + 1), 3)
-
+    #sparse_data1 <- round(log2(sparse_data1 + 1), 3)
+    sparse_data1 <- log1p(sparse_data1)/log(2)
     return(sparse_data1)
   }
 
