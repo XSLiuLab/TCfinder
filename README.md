@@ -45,7 +45,7 @@ The path score is calculated using the built-in 213 pathways according to the fo
 The output of data_normalized() can be directly used as the input of pathway_score(). If the matrix is not normalized, "normalized = FALSE" is needed to set
 
 ```R
-result2 <- pathway_score(normalized_matrix = result1)
+result2 <- pathway_score(expr_data = result1, normalized = T)
 ```
 
 #### result2: pathway score
