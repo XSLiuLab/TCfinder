@@ -84,7 +84,7 @@ The prediction process needs to call a python script, so the R package 'reticula
 install.packages("reticulate")
 library(reticulate)
 # Use the use_python() function to specify the version, here we use the python just created and configured above
-reticulate::use_python("XXX/XXX/XXX/anaconda3/envs/new_env/python.exe")
+reticulate::use_python("XXX/XXX/XXX/anaconda3/envs/new_env/bin/python")
 # View specified environment information
 reticulate::py_config()
 # Predict
