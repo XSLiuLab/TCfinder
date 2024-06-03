@@ -70,7 +70,7 @@ conda create -n new_env python=3.8
 conda activate new_env
 # Install required modules
 conda install tensorflow==2.3.0
-conda install pandasw==1.0.5
+conda install pandas==1.0.5
 conda install numpy==1.18.5
 # View conda environment information
 conda env list # Copy the address of the new conda environment, which will be used later
