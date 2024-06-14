@@ -47,7 +47,7 @@ model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy']
 
 b_size = 50
 max_epochs = 100
-h = model.fit(x_train, y_train, batch_size=b_size, epochs=max_epochs, shuffle=True, verbose=1)  ##调参，节点数，层数
+h = model.fit(x_train, y_train, batch_size=b_size, epochs=max_epochs, shuffle=True, verbose=1) 
 eval = model.evaluate(x_train, y_train, verbose=0, batch_size=b_size)
 print("Evaluation on train data: loss = %0.6f accuracy = %0.2f%% \n" % (eval[0], eval[1] * 100))
 
