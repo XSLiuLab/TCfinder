@@ -8,6 +8,18 @@ TCfinder is a tool for predicting tumor cells and normal cells in single-cell da
 
 ## Installation and use of TCfinder package.
 
+TCfinder is an R package that can be downloaded and used via Github. TCfinder relies on several R packages, and these dependencies include：
+
+R (>= 3.5.0);
+
+dplyr (>= 1.1.0);
+
+reticulate (>= 1.2.6);
+
+Matrix;
+
+fs;
+
 ### Install
 
 ```R
