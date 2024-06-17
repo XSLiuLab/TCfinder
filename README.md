@@ -1,6 +1,6 @@
 # TCfinder
 
-TCfinder is a tool for predicting tumor cells and normal cells in single-cell data based on pathway scores.
+TCfinder is the tool to distinguish tumor cells from normal cells in single-cell data from the perspective of gene pathway expression quantification. A pathway usually contains multiple genes, which makes TCfinder more applicable because it overcomes the single-cell data sparsity problem faced by traditional methods. The successful construction of TCfinder also suggests the applicability of gene pathway expression quantification in the annotation of other cell types in scRNA-seq.
 
 ## Workflow
 
