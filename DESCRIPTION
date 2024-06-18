@@ -2,8 +2,12 @@ Package: TCfinder
 Title: Tumor cell identification in single-cell datasets
 Version: 1.2.0.1
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+    person("chenxu", "Wu", , "wuchx@shanghaitech.edu.cn", role = c("aut", "cre"),
+           comment = c(ORCID = "0009-0005-7257-4470")),
+    person("Tao", "Wu", , "wutao2@shanghaitech.edu.cn", role = "aut",
+           comment = c(ORCID = "0000-0002-8999-9628")),
+    person("Xue-Song", "Liu", role = c("aut", "ctb"),
+           comment = c(ORCID = "0000-0002-7736-0077"))
 Description: Perform normalization and pathway score calculations on single-cell data, and distinguish tumor cells from normal cells in single-cell datasets.
 License: MIT + file LICENSE
 Encoding: UTF-8
