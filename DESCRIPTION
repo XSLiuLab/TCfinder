@@ -2,9 +2,9 @@ Package: TCfinder
 Title: Tumor cell identification in single-cell datasets
 Version: 1.2.0.1
 Authors@R: 
-    person("chenxu", "Wu", , "wuchx@shanghaitech.edu.cn", role = c("aut", "cre"),
+    person("chenxu", "Wu", "wuchx@shanghaitech.edu.cn", role = c("aut", "cre"),
            comment = c(ORCID = "0009-0005-7257-4470")),
-    person("Tao", "Wu", , "wutao2@shanghaitech.edu.cn", role = "aut",
+    person("Tao", "Wu", "wutao2@shanghaitech.edu.cn", role = "aut",
            comment = c(ORCID = "0000-0002-8999-9628")),
     person("Xue-Song", "Liu", role = c("aut", "ctb"),
            comment = c(ORCID = "0000-0002-7736-0077"))
