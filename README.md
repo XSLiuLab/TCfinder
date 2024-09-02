@@ -112,6 +112,10 @@ predict_result <- predict_cell(path_score = result2)
 |  3   | 0.0001887589 |   tumor   | AAACGGGGTTGTCGCG |
 | ...  |     ...      |    ...    |       ...        |
 
+## Citation
+
+Chenxu Wu, Wei Ning, Tao Wu, Jing Chen, Huizi Yao, Ziyu Tao, Xiangyu Zhao, Kaixuan Diao, Jinyu Wang, Weiliang Wang, Xinxing Li, Qianqian Song, Xue-Song Liu. 2024. TCfinder: Robust tumor cell discriminationin scRNA-seq based on gene pathway activity. iMetaOmics 1: e22. https://doi.org/10.1002/imo2.22
+
 ## Contributors
 
 TCfinder was developed by Chenxu Wu. Please contact Chenxu Wu: wuchx@shanghaitech.edu.cn for any questions or suggestions. Thank you for your use and feedback.
